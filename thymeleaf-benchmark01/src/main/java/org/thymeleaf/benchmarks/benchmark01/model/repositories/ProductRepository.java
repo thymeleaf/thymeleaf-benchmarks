@@ -78,7 +78,7 @@ public class ProductRepository {
         
         final Comment comm21 = new Comment();
         comm21.setId(Integer.valueOf(1));
-        comm21.setText("I'm so sad this product is no longer available!");
+        comm21.setText("I am so sad this product is no longer available!");
         prod2.getComments().add(comm21);
         
         final Comment comm22 = new Comment();
@@ -88,7 +88,7 @@ public class ProductRepository {
         
         final Comment comm41 = new Comment();
         comm41.setId(Integer.valueOf(3));
-        comm41.setText("Very tasty! I'd definitely buy it again!");
+        comm41.setText("Very tasty! I would definitely buy it again!");
         prod4.getComments().add(comm41);
         
     }
