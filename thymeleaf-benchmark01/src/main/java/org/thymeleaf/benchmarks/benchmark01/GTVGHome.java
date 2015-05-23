@@ -19,8 +19,7 @@ public class GTVGHome extends BaseBenchmark {
     @Setup
     public void setup() throws IOException {
 
-        this.engine = new TemplateEngine();
-        this.engine.setTemplateResolver(buildTemplateResolver());
+        this.engine = buildTemplateEngine();
 
         this.context = new Context(Locale.ENGLISH);
         this.context.setVariable("user", buildUser());

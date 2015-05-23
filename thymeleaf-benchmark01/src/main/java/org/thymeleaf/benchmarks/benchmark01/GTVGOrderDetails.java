@@ -20,8 +20,7 @@ public class GTVGOrderDetails extends BaseBenchmark {
     @Setup
     public void setup() throws IOException {
 
-        this.engine = new TemplateEngine();
-        this.engine.setTemplateResolver(buildTemplateResolver());
+        this.engine = buildTemplateEngine();
 
         final Order order = OrderRepository.getInstance().findById(Integer.valueOf(1));
 

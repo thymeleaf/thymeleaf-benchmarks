@@ -21,8 +21,7 @@ public class GTVGOrderList extends BaseBenchmark {
     @Setup
     public void setup() throws IOException {
 
-        this.engine = new TemplateEngine();
-        this.engine.setTemplateResolver(buildTemplateResolver());
+        this.engine = buildTemplateEngine();
 
         final List<Order> orders = OrderRepository.getInstance().findAll();
 

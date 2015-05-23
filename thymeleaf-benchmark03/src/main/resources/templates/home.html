@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+
+  <!--
+    NOTE ON URLS: We will be using absolute URLs everywhere because Thymeleaf 2.1 does not allow relative URLs in
+                  non-web environments.
+  -->
+  <head>
+    <title>Good Thymes Virtual Grocery</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/gtvg.css" th:href="@{http://server/css/gtvg.css}" />
+  </head>
+
+  <body>
+
+    <div>
+      <img src="../../images/gtvglogo.png" alt="GTVG logo" title="GTVG logo" 
+           th:src="@{http://server/images/gtvglogo.png}" th:alt-title="#{logo}" />
+    </div>
+  
+    <p th:utext="#{home.welcome(${user.name})}">Welcome to our grocery store, Sebastian!</p>
+  
+    <p>
+      Today is: <span th:with="df=#{date.format}" th:text="${#calendars.format(today,df)}">13 February 2011</span>
+    </p>
+    
+    <p>Please select an option</p>
+    <ol>
+      <li><a href="product/list.html" th:href="@{http://server/product/list}">Product List</a></li>
+      <li><a href="order/list.html" th:href="@{http://server/order/list}">Order List</a></li>
+      <li><a href="subscribe.html" th:href="@{http://server/subscribe}">Subscribe to our Newsletter</a></li>
+      <li><a href="userprofile.html" th:href="@{http://server/userprofile}">See User Profile</a></li>
+    </ol>
+      
+    <p>Now you are looking at a <span th:text="'working web application'">template file</span>.</p>
+
+    <div th:replace="footer::copy(2015)">&copy; 2011 The Static Templates</div>
+
+  </body>
+  
+</html>
+

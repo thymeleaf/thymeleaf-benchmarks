@@ -10,6 +10,7 @@ import org.openjdk.jmh.annotations.OutputTimeUnit;
 import org.openjdk.jmh.annotations.Scope;
 import org.openjdk.jmh.annotations.State;
 import org.openjdk.jmh.annotations.Warmup;
+import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.benchmarks.benchmark01.model.User;
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 import org.thymeleaf.templateresolver.ITemplateResolver;
@@ -22,6 +23,12 @@ import org.thymeleaf.templateresolver.ITemplateResolver;
 @State(Scope.Benchmark)
 public class BaseBenchmark {
 
+
+    protected TemplateEngine buildTemplateEngine() {
+        final TemplateEngine templateEngine = new TemplateEngine();
+        templateEngine.setTemplateResolver(buildTemplateResolver());
+        return templateEngine;
+    }
 
     protected ITemplateResolver buildTemplateResolver() {
         final ClassLoaderTemplateResolver templateResolver = new ClassLoaderTemplateResolver();
