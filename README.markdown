@@ -3,8 +3,9 @@
 
 To create the benchmark artifacts:
 ```
-mvn clean compile package
+mvn -P {version} clean compile package
 ```
+(Currently available version profiles are: `2.1.4`, `3.0.0`)
 
 To execute jmh benchmarks with CSV output:
 ```
