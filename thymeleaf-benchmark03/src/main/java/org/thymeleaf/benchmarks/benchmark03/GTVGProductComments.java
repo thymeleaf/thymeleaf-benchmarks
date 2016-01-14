@@ -27,6 +27,8 @@ public class GTVGProductComments extends BaseBenchmark {
         this.context = new Context(Locale.ENGLISH);
         this.context.setVariable("prod", product);
 
+        addEvaluationContext(this.context);
+
     }
 
 

@@ -10,9 +10,12 @@ import org.openjdk.jmh.annotations.OutputTimeUnit;
 import org.openjdk.jmh.annotations.Scope;
 import org.openjdk.jmh.annotations.State;
 import org.openjdk.jmh.annotations.Warmup;
+import org.springframework.jndi.support.SimpleJndiBeanFactory;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.benchmarks.benchmark03.model.User;
+import org.thymeleaf.context.Context;
 import org.thymeleaf.spring4.SpringTemplateEngine;
+import org.thymeleaf.spring4.expression.ThymeleafEvaluationContext;
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 import org.thymeleaf.templateresolver.ITemplateResolver;
 
@@ -45,5 +48,15 @@ public class BaseBenchmark {
     protected User buildUser() {
         return new User("John", "Apricot", "Antarctica", null);
     }
+
+
+    protected void addEvaluationContext(final Context context) {
+
+        final ThymeleafEvaluationContext evaluationContext =
+                new ThymeleafEvaluationContext(new SimpleJndiBeanFactory(), null);
+        context.setVariable(ThymeleafEvaluationContext.THYMELEAF_EVALUATION_CONTEXT_CONTEXT_VARIABLE_NAME, evaluationContext);
+
+    }
+
 
 }

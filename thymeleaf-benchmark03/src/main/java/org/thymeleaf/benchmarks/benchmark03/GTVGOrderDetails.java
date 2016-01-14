@@ -27,6 +27,8 @@ public class GTVGOrderDetails extends BaseBenchmark {
         this.context = new Context(Locale.ENGLISH);
         this.context.setVariable("order", order);
 
+        addEvaluationContext(this.context);
+
     }
 
 

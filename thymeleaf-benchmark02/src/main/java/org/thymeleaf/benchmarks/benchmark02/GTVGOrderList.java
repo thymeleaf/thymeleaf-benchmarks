@@ -28,6 +28,8 @@ public class GTVGOrderList extends BaseBenchmark {
         this.context = new Context(Locale.ENGLISH);
         this.context.setVariable("orders", orders);
 
+        addEvaluationContext(this.context);
+
     }
 
 

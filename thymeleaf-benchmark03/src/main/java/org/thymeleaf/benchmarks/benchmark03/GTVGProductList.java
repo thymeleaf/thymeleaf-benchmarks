@@ -28,6 +28,8 @@ public class GTVGProductList extends BaseBenchmark {
         this.context = new Context(Locale.ENGLISH);
         this.context.setVariable("prods", prods);
 
+        addEvaluationContext(this.context);
+
     }
 
 

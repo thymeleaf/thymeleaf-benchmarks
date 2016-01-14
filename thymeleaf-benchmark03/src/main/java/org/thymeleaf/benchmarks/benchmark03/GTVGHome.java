@@ -25,6 +25,7 @@ public class GTVGHome extends BaseBenchmark {
         this.context.setVariable("user", buildUser());
         this.context.setVariable("today", CalendarUtil.calendarFor(2015, 1, 1, 8, 0));
 
+        addEvaluationContext(this.context);
 
     }
 
