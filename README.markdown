@@ -1,6 +1,18 @@
 
 # Thymeleaf Benchmarks
 
+  * Benchmark 01: Using the templates and data from the GTVG example application, meant to test different versions of
+                  Thymeleaf in non-Spring environments (i.e. using OGNL).
+  * Benchmark 02: Using the templates and data from the GTVG example application, meant to test different versions of
+                  Thymeleaf in Spring 3.x-enabled environments. 
+  * Benchmark 03: Using the templates and data from the GTVG example application, meant to test different versions of
+                  Thymeleaf in Spring 4.x-enabled environments. 
+  * Benchmark 04: Using the templates and data from the GTVG example application, meant to test different versions of
+                  Thymeleaf in Spring 4.x-enabled environments with SpringEL compilation enabled (for Thymeleaf >= v3). 
+
+
+# How to use the Benchmarks
+
 To create the benchmark artifacts:
 ```
 mvn -P {version} clean compile package
@@ -16,3 +28,5 @@ To install gnuplot using brew:
 ```
 $ brew install gnuplot --cairo
 ```
+
+
