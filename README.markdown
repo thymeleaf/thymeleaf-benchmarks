@@ -24,9 +24,19 @@ To execute jmh benchmarks with CSV output:
 java -jar target/thymeleaf-benchmarkXX.jar {BenchmarkName01 BenchmarkName02 ...}? -rf csv -rff benchmarkoutput.csv
 ```
 
+### Plotting results
+
 To install gnuplot using brew:
 ```
-$ brew install gnuplot --cairo
+$ brew install gnuplot --with-cairo
 ```
 
+In order to do the plotting, combine the several `.csv` files output from the benchmark executions into one
+called `thymeleaf-benchmarks.csv` (preferrably changing the names in the first column to smaller, more
+displayable names) and place it in the projects root folder. Then execute:
+```
+$ gnuplot thymeleaf-benchmarks.plot
+```
+
+This should create a file called `thymeleaf-benchmarks.png` containing the results graph.
 
