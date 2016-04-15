@@ -1,4 +1,4 @@
-set title 'Thymeleaf Benchmarking Results'
+set title 'Thymeleaf Benchmark Results'
 set ylabel 'executions/sec'
 
 set autoscale

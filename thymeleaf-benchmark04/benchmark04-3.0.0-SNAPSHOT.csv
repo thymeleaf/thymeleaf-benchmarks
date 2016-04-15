@@ -1,0 +1,6 @@
+"Benchmark","Mode","Threads","Samples","Score","Score Error (99.9%)","Unit"
+"org.thymeleaf.benchmarks.benchmark04.GTVGHome.benchmark","thrpt",1,50,51051.944289,507.501325,"ops/s"
+"org.thymeleaf.benchmarks.benchmark04.GTVGOrderDetails.benchmark","thrpt",1,50,32688.236776,200.956071,"ops/s"
+"org.thymeleaf.benchmarks.benchmark04.GTVGOrderList.benchmark","thrpt",1,50,23767.260254,265.208761,"ops/s"
+"org.thymeleaf.benchmarks.benchmark04.GTVGProductComments.benchmark","thrpt",1,50,72350.663812,570.571815,"ops/s"
+"org.thymeleaf.benchmarks.benchmark04.GTVGProductList.benchmark","thrpt",1,50,8135.065552,72.625963,"ops/s"
