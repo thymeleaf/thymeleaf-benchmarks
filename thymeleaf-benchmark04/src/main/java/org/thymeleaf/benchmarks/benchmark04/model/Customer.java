@@ -17,22 +17,18 @@
  * 
  * =============================================================================
  */
-package org.thymeleaf.benchmarks.benchmark03.model;
+package org.thymeleaf.benchmarks.benchmark04.model;
 
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Calendar;
 
-public class Product {
+public class Customer {
 
     private Integer id = null;
     private String name = null;
-    private BigDecimal price = null;
-    private boolean inStock = false;
-    private List<Comment> comments = new ArrayList<Comment>();
+    private Calendar customerSince = null;
+
     
-    
-    public Product() {
+    public Customer() {
         super();
     }
 
@@ -43,7 +39,7 @@ public class Product {
     public void setId(final Integer id) {
         this.id = id;
     }
-
+    
 
     public String getName() {
         return this.name;
@@ -53,24 +49,11 @@ public class Product {
     }
     
 
-    public BigDecimal getPrice() {
-        return this.price;
+    public Calendar getCustomerSince() {
+        return this.customerSince;
     }
-    public void setPrice(final BigDecimal price) {
-        this.price = price;
-    }
-
-
-    public boolean isInStock() {
-        return this.inStock;
-    }
-    public void setInStock(final boolean inStock) {
-        this.inStock = inStock;
-    }
-    
-    
-    public List<Comment> getComments() {
-        return this.comments;
+    public void setCustomerSince(final Calendar customerSince) {
+        this.customerSince = customerSince;
     }
     
 }

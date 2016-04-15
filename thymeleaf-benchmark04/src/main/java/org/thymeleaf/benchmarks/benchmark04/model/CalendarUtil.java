@@ -17,43 +17,34 @@
  * 
  * =============================================================================
  */
-package org.thymeleaf.benchmarks.benchmark03.model;
+package org.thymeleaf.benchmarks.benchmark04.model;
 
 import java.util.Calendar;
 
-public class Customer {
 
-    private Integer id = null;
-    private String name = null;
-    private Calendar customerSince = null;
+public class CalendarUtil {
+    
+    
+    public static Calendar calendarFor(
+            final int year,  final int month, final int day, final int hour, final int minute) {
+        
+        final Calendar cal = Calendar.getInstance();
+        cal.set(Calendar.YEAR, year);
+        cal.set(Calendar.MONTH, month - 1);
+        cal.set(Calendar.DAY_OF_MONTH, day);
+        cal.set(Calendar.HOUR_OF_DAY, hour);
+        cal.set(Calendar.MINUTE, minute);
+        cal.set(Calendar.SECOND, 0);
+        cal.set(Calendar.MILLISECOND, 0);
+        return cal;
+        
+    }
 
     
-    public Customer() {
+    
+    private CalendarUtil() {
         super();
     }
-
-
-    public Integer getId() {
-        return this.id;
-    }
-    public void setId(final Integer id) {
-        this.id = id;
-    }
     
-
-    public String getName() {
-        return this.name;
-    }
-    public void setName(final String name) {
-        this.name = name;
-    }
-    
-
-    public Calendar getCustomerSince() {
-        return this.customerSince;
-    }
-    public void setCustomerSince(final Calendar customerSince) {
-        this.customerSince = customerSince;
-    }
     
 }

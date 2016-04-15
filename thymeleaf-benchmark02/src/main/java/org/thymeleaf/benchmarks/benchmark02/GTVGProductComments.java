@@ -22,7 +22,7 @@ public class GTVGProductComments extends BaseBenchmark {
 
         this.engine = buildTemplateEngine();
 
-        final Product product = ProductRepository.getInstance().findById(Integer.valueOf(2));
+        final Product product = ProductRepository.getInstance().findById(Integer.valueOf(13));
 
         this.context = new Context(Locale.ENGLISH);
         this.context.setVariable("prod", product);

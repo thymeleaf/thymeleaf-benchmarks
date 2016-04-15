@@ -1,4 +1,4 @@
-package org.thymeleaf.benchmarks.benchmark03;
+package org.thymeleaf.benchmarks.benchmark04;
 
 import java.lang.reflect.Method;
 import java.util.concurrent.TimeUnit;
@@ -13,7 +13,7 @@ import org.openjdk.jmh.annotations.State;
 import org.openjdk.jmh.annotations.Warmup;
 import org.springframework.jndi.support.SimpleJndiBeanFactory;
 import org.thymeleaf.TemplateEngine;
-import org.thymeleaf.benchmarks.benchmark03.model.User;
+import org.thymeleaf.benchmarks.benchmark04.model.User;
 import org.thymeleaf.context.Context;
 import org.thymeleaf.spring4.SpringTemplateEngine;
 import org.thymeleaf.spring4.expression.ThymeleafEvaluationContext;

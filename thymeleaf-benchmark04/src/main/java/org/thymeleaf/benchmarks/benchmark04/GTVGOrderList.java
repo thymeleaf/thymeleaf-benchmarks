@@ -1,4 +1,4 @@
-package org.thymeleaf.benchmarks.benchmark03;
+package org.thymeleaf.benchmarks.benchmark04;
 
 import java.io.IOException;
 import java.io.StringWriter;
@@ -9,8 +9,8 @@ import java.util.Locale;
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.Setup;
 import org.thymeleaf.TemplateEngine;
-import org.thymeleaf.benchmarks.benchmark03.model.Order;
-import org.thymeleaf.benchmarks.benchmark03.model.repositories.OrderRepository;
+import org.thymeleaf.benchmarks.benchmark04.model.Order;
+import org.thymeleaf.benchmarks.benchmark04.model.repositories.OrderRepository;
 import org.thymeleaf.context.Context;
 
 public class GTVGOrderList extends BaseBenchmark {

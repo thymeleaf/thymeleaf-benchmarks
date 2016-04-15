@@ -8,6 +8,11 @@ import java.util.Locale;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.thymeleaf.benchmarks.benchmark04.GTVGHome;
+import org.thymeleaf.benchmarks.benchmark04.GTVGOrderDetails;
+import org.thymeleaf.benchmarks.benchmark04.GTVGOrderList;
+import org.thymeleaf.benchmarks.benchmark04.GTVGProductComments;
+import org.thymeleaf.benchmarks.benchmark04.GTVGProductList;
 import org.thymeleaf.util.ClassLoaderUtils;
 
 import static org.junit.Assert.assertEquals;

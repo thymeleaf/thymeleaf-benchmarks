@@ -2,11 +2,11 @@ package org.thymeleaf.benchmarks.benchmark03;
 
 import java.util.Locale;
 
-import org.thymeleaf.benchmarks.benchmark03.GTVGHome;
-import org.thymeleaf.benchmarks.benchmark03.GTVGOrderDetails;
-import org.thymeleaf.benchmarks.benchmark03.GTVGOrderList;
-import org.thymeleaf.benchmarks.benchmark03.GTVGProductComments;
-import org.thymeleaf.benchmarks.benchmark03.GTVGProductList;
+import org.thymeleaf.benchmarks.benchmark04.GTVGHome;
+import org.thymeleaf.benchmarks.benchmark04.GTVGOrderDetails;
+import org.thymeleaf.benchmarks.benchmark04.GTVGOrderList;
+import org.thymeleaf.benchmarks.benchmark04.GTVGProductComments;
+import org.thymeleaf.benchmarks.benchmark04.GTVGProductList;
 
 public class IterationTest {
 

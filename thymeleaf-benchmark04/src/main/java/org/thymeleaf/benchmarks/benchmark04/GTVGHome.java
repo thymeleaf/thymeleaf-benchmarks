@@ -1,4 +1,4 @@
-package org.thymeleaf.benchmarks.benchmark03;
+package org.thymeleaf.benchmarks.benchmark04;
 
 import java.io.IOException;
 import java.io.StringWriter;
@@ -8,11 +8,10 @@ import java.util.Locale;
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.Setup;
 import org.thymeleaf.TemplateEngine;
-import org.thymeleaf.benchmarks.benchmark03.model.Product;
-import org.thymeleaf.benchmarks.benchmark03.model.repositories.ProductRepository;
+import org.thymeleaf.benchmarks.benchmark04.model.CalendarUtil;
 import org.thymeleaf.context.Context;
 
-public class GTVGProductComments extends BaseBenchmark {
+public class GTVGHome extends BaseBenchmark {
 
     private TemplateEngine engine;
     private Context context;
@@ -22,10 +21,9 @@ public class GTVGProductComments extends BaseBenchmark {
 
         this.engine = buildTemplateEngine();
 
-        final Product product = ProductRepository.getInstance().findById(Integer.valueOf(2));
-
         this.context = new Context(Locale.ENGLISH);
-        this.context.setVariable("prod", product);
+        this.context.setVariable("user", buildUser());
+        this.context.setVariable("today", CalendarUtil.calendarFor(2015, 1, 1, 8, 0));
 
         addEvaluationContext(this.context);
 
@@ -35,7 +33,7 @@ public class GTVGProductComments extends BaseBenchmark {
     @Benchmark
     public String benchmark() throws Exception {
         Writer writer = new StringWriter();
-        engine.process("product/comments", context, writer);
+        engine.process("home", context, writer);
         return writer.toString();
     }
 

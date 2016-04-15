@@ -17,7 +17,7 @@
  * 
  * =============================================================================
  */
-package org.thymeleaf.benchmarks.benchmark03.model;
+package org.thymeleaf.benchmarks.benchmark04.model;
 
 
 public class Comment {
@@ -30,6 +30,10 @@ public class Comment {
         super();
     }
 
+    public Comment(final Integer id, final String text) {
+        this.id = id;
+        this.text = text;
+    }
 
     public Integer getId() {
         return this.id;

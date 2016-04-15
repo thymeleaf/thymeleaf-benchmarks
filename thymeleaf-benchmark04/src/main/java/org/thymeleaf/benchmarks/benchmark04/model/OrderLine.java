@@ -17,7 +17,7 @@
  * 
  * =============================================================================
  */
-package org.thymeleaf.benchmarks.benchmark03.model;
+package org.thymeleaf.benchmarks.benchmark04.model;
 
 import java.math.BigDecimal;
 

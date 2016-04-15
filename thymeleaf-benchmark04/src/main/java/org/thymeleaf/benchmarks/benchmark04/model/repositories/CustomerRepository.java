@@ -17,15 +17,15 @@
  * 
  * =============================================================================
  */
-package org.thymeleaf.benchmarks.benchmark03.model.repositories;
+package org.thymeleaf.benchmarks.benchmark04.model.repositories;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.thymeleaf.benchmarks.benchmark03.model.CalendarUtil;
-import org.thymeleaf.benchmarks.benchmark03.model.Customer;
+import org.thymeleaf.benchmarks.benchmark04.model.CalendarUtil;
+import org.thymeleaf.benchmarks.benchmark04.model.Customer;
 
 
 public class CustomerRepository {

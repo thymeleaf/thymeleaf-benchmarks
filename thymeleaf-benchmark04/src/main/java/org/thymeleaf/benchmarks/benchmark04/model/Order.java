@@ -17,34 +17,50 @@
  * 
  * =============================================================================
  */
-package org.thymeleaf.benchmarks.benchmark03.model;
+package org.thymeleaf.benchmarks.benchmark04.model;
 
 import java.util.Calendar;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
+public class Order {
 
-public class CalendarUtil {
+    private Integer id = null;
+    private Calendar date = null;
+    private Customer customer = null;
+    private Set<OrderLine> orderLines = new LinkedHashSet<OrderLine>();
     
-    
-    public static Calendar calendarFor(
-            final int year,  final int month, final int day, final int hour, final int minute) {
-        
-        final Calendar cal = Calendar.getInstance();
-        cal.set(Calendar.YEAR, year);
-        cal.set(Calendar.MONTH, month - 1);
-        cal.set(Calendar.DAY_OF_MONTH, day);
-        cal.set(Calendar.HOUR_OF_DAY, hour);
-        cal.set(Calendar.MINUTE, minute);
-        cal.set(Calendar.SECOND, 0);
-        cal.set(Calendar.MILLISECOND, 0);
-        return cal;
-        
-    }
-
-    
-    
-    private CalendarUtil() {
+    public Order() {
         super();
     }
+
     
+    public Integer getId() {
+        return this.id;
+    }
+    public void setId(final Integer id) {
+        this.id = id;
+    }
+    
+
+    public Calendar getDate() {
+        return this.date;
+    }
+    public void setDate(final Calendar date) {
+        this.date = date;
+    }
+    
+
+    public Customer getCustomer() {
+        return this.customer;
+    }
+    public void setCustomer(final Customer customer) {
+        this.customer = customer;
+    }
+    
+
+    public Set<OrderLine> getOrderLines() {
+        return this.orderLines;
+    }
     
 }
