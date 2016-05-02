@@ -11,7 +11,7 @@ import org.openjdk.jmh.annotations.OutputTimeUnit;
 import org.openjdk.jmh.annotations.Scope;
 import org.openjdk.jmh.annotations.State;
 import org.openjdk.jmh.annotations.Warmup;
-import org.springframework.jndi.support.SimpleJndiBeanFactory;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.benchmarks.benchmark04.model.User;
 import org.thymeleaf.context.Context;
@@ -55,7 +55,7 @@ public class BaseBenchmark {
     protected void addEvaluationContext(final Context context) {
 
         final ThymeleafEvaluationContext evaluationContext =
-                new ThymeleafEvaluationContext(new SimpleJndiBeanFactory(), null);
+                new ThymeleafEvaluationContext(new ClassPathXmlApplicationContext(), null);
         context.setVariable(ThymeleafEvaluationContext.THYMELEAF_EVALUATION_CONTEXT_CONTEXT_VARIABLE_NAME, evaluationContext);
 
     }
