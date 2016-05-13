@@ -132,9 +132,15 @@
       </properties>
     </profile>
     <profile>
+      <id>3.0.0.BETA03</id>
+      <properties>
+        <thymeleaf.version>3.0.0.BETA03</thymeleaf.version>
+      </properties>
+    </profile>
+    <profile>
       <id>3.0.0</id>
       <properties>
-        <thymeleaf.version>3.0.0-SNAPSHOT</thymeleaf.version>
+        <thymeleaf.version>3.0.0.RELEASE</thymeleaf.version>
       </properties>
     </profile>
   </profiles>
